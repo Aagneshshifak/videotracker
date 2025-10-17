@@ -1,0 +1,100 @@
+You want me to update the previous checklist with the information from the three newly provided images.
+
+Here is the updated and complete checklist of folder names and the video titles inside them, in the correct order:
+
+*1.1 Python for DataScience*
+ 1.⁠ ⁠Introduction of Python.mp4
+ 2.⁠ ⁠DataTypes.mp4
+ 3.⁠ ⁠Operators.mp4
+ 4.⁠ ⁠Typecasting.mp4
+ 5.⁠ ⁠Strings.mp4
+ 6.⁠ ⁠Variables.mp4
+
+*1.2. Conditionals and Flow Controls*
+ 1.⁠ ⁠If-else.mp4
+ 2.⁠ ⁠for-loop.mp4
+ 3.⁠ ⁠while-loop.mp4
+
+*1.3. Data Structures*
+ 1.⁠ ⁠Why do we need Data Structures?
+ 2.⁠ ⁠List
+ 3.⁠ ⁠Multi Dimensional List
+ 4.⁠ ⁠List Comprehension
+ 5.⁠ ⁠Dictionary
+ 6.⁠ ⁠Multi-Dimensional Dictionary
+ 7.⁠ ⁠Dictionary Comprehension
+ 8.⁠ ⁠Set and Tuples
+ 9.⁠ ⁠How to decide a Data Structure for a problem
+
+*1.4. Function and OOPS*
+ 1.⁠ ⁠Functions
+ 2.⁠ ⁠Modules
+ 3.⁠ ⁠Important Inbuild Libraries
+ 4.⁠ ⁠Understanding Classes and Objects
+ 5.⁠ ⁠Methods.mp4
+ 6.⁠ ⁠Classes with Module.mp4
+
+*1.5. Special Functions*
+ 1.⁠ ⁠Zip, Filter, Lambda and Map
+ 2.⁠ ⁠ASCII Code
+
+*1.6. Exceptions*
+ 1.⁠ ⁠Understanding Errors.mp4
+ 2.⁠ ⁠Handling the Exception.mp4
+
+*2.1 Basic Probability for Data Science*
+ 1.⁠ ⁠Introduction to Probabilities
+ 2.⁠ ⁠Rules of Probability
+ 3.⁠ ⁠Random experiments, sample space and events
+ 4.⁠ ⁠Permutation and Combinations
+ 5.⁠ ⁠Union and Intersection, Venn Diagram.mp4
+ 6.⁠ ⁠Joint and Conditional Probability.mp4
+ 7.⁠ ⁠Bayes's Theorem.mp4
+
+*2.2 Fundamentals of Statistics*
+ 1.⁠ ⁠Introduction of Statistics.mp4
+ 2.⁠ ⁠Data.mp4
+ 3.⁠ ⁠Frequency.mp4
+ 4.⁠ ⁠Measure of central Tendency.mp4
+ 5.⁠ ⁠Measure of Dispersion.mp4
+ 6.⁠ ⁠Measure of Relative Dispersion.mp4
+ 7.⁠ ⁠Measure of Shape.mp4
+
+*2.3 Probability Distribution*
+ 1.⁠ ⁠Introduction to Probability Distribution.mp4
+ 2.⁠ ⁠Uniform Discrete Distribution.mp4
+ 3.⁠ ⁠Bernoulli Distribution.mp4
+ 4.⁠ ⁠Binomial Distribution.mp4
+ 5.⁠ ⁠Poisson Distribution.mp4
+ 6.⁠ ⁠Continuous Uniform Distribution.mp4
+ 7.⁠ ⁠Exponential Distribution.mp4
+ 8.⁠ ⁠Normal Distribution.mp4
+ 9.⁠ ⁠Standard Normal Distribution.mp4
+10.⁠ ⁠Normalization.mp4
+11.⁠ ⁠T Distribution.mp4
+
+*2.4 Inferential Statistics*
+ 1.⁠ ⁠Population and Sample.mp4
+ 2.⁠ ⁠Central Limit Theorem.mp4
+ 3.⁠ ⁠Confidence Interval Part -1.mp4
+ 4.⁠ ⁠Confidence Interval Part -2.mp4
+ 5.⁠ ⁠Hypothesis Testing.mp4
+ 6.⁠ ⁠Z Test Two Tailed.mp4
+ 7.⁠ ⁠Z Test one Tailed.mp4
+ 8.⁠ ⁠T-Test.mp4
+ 9.⁠ ⁠T-Test(Continued).mp4
+10.⁠ ⁠Chi squared test.mp4
+11.⁠ ⁠Chi square test for feature selection.mp4
+
+*3.1 Getting started with Pandas*
+ 1.⁠ ⁠Getting Started with Pandas.mp4
+ 2.⁠ ⁠Dataset Walkthrough.mp4
+
+*3.2 Data Preprocessing with Google Playstore*
+ 1.⁠ ⁠Data preprocessing - Removing Null value rows.mp4
+ 2.⁠ ⁠Data Analysis Numeric.mp4
+ 3.⁠ ⁠Data Analysis Categorical.mp4
+ 4.⁠ ⁠Data Analysis Automatic Categorical.mp4
+ 5.⁠ ⁠Null Values Handling Numeric.mp4
+ 6.⁠ ⁠Null Values Handling Categorical.mp4
+ 7.⁠ ⁠Null Values Handling in Google Playstore Dataset.mp4
