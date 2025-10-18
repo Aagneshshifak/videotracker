@@ -10,11 +10,11 @@ async function startServer() {
   await registerRoutes(app);
 
   // Serve static files from the React app build
-  app.use(express.static(path.join(__dirname, "../dist")));
+  app.use(express.static(path.join(process.cwd(), "dist")));
 
   // Handle React routing, return all requests to React app
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../dist/index.html"));
+  app.use((req, res) => {
+    res.sendFile(path.join(process.cwd(), "dist/index.html"));
   });
 
   app.listen(PORT, "0.0.0.0", () => {

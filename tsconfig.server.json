@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./",
-    "module": "es2022",
+    "module": "commonjs",
     "target": "es2020",
     "moduleResolution": "node",
     "esModuleInterop": true,
