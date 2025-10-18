@@ -33,7 +33,7 @@ export interface IStorage {
 export class DbStorage implements IStorage {
   // Profile operations
   async createProfile(data: InsertProfile & { userId: string }): Promise<Profile> {
-    const [profile] = await db.insert(profiles).values(data).returning();
+    const [profile] = await db.insert(profiles).values(data as any).returning();
     return profile;
   }
 
@@ -67,7 +67,7 @@ export class DbStorage implements IStorage {
   }
 
   async setUserRole(data: InsertUserRole): Promise<UserRole> {
-    const [role] = await db.insert(userRoles).values(data).returning();
+    const [role] = await db.insert(userRoles).values(data as any).returning();
     return role;
   }
 
@@ -82,14 +82,14 @@ export class DbStorage implements IStorage {
   }
 
   async createVideo(data: InsertVideo): Promise<Video> {
-    const [video] = await db.insert(videos).values(data).returning();
+    const [video] = await db.insert(videos).values(data as any).returning();
     return video;
   }
 
   async updateVideo(id: string, data: Partial<InsertVideo>): Promise<Video> {
     const [video] = await db
       .update(videos)
-      .set(data)
+      .set(data as any)
       .where(eq(videos.id, id))
       .returning();
     return video;
@@ -117,7 +117,7 @@ export class DbStorage implements IStorage {
       ...data,
       completedAt: data.completedAt ? (typeof data.completedAt === 'string' ? new Date(data.completedAt) : data.completedAt) : null,
     };
-    const [progress] = await db.insert(studentProgress).values(dbData).returning();
+    const [progress] = await db.insert(studentProgress).values(dbData as any).returning();
     return progress;
   }
 
@@ -129,7 +129,7 @@ export class DbStorage implements IStorage {
     };
     const [progress] = await db
       .update(studentProgress)
-      .set(dbData)
+      .set(dbData as any)
       .where(eq(studentProgress.id, id))
       .returning();
     return progress;

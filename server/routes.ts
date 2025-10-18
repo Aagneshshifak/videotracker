@@ -1,17 +1,13 @@
 import type { Express, Request, Response, NextFunction } from "express";
 import express from "express";
 import { createServer as createViteServer } from "vite";
-import { fileURLToPath } from "url";
-import { dirname, resolve } from "path";
+import { resolve } from "path";
 import { existsSync } from "fs";
 import bcrypt from "bcryptjs";
 import { storage } from "./storage";
 import { insertProfileSchema, insertVideoSchema, insertStudentProgressSchema } from "@shared/schema";
 import { z } from "zod";
 import { randomUUID } from "crypto";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 // Extend Express session types
 declare module "express-session" {
@@ -319,7 +315,7 @@ export async function registerRoutes(app: Express) {
   });
 
   // Serve static files from dist folder if it exists, otherwise use Vite dev server
-  const distPath = resolve(__dirname, "..", "dist");
+  const distPath = resolve(process.cwd(), "dist");
   
   if (existsSync(distPath)) {
     // Production mode: serve built static files
@@ -342,7 +338,7 @@ export async function registerRoutes(app: Express) {
         hmr: true,  // Enable HMR for development
       },
       appType: "spa",
-      root: resolve(__dirname, ".."),
+      root: process.cwd(),
     });
 
     app.use(vite.middlewares);

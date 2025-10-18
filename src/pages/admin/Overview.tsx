@@ -2,13 +2,11 @@ import { useEffect, useState } from "react";
 import { api } from "@/lib/api";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Users, Video, CheckCircle2, TrendingUp } from "lucide-react";
+import { Users, Video } from "lucide-react";
 
 interface Stats {
   totalStudents: number;
   totalVideos: number;
-  totalCompleted: number;
-  averageProgress: number;
   topStudents: Array<{ name: string; progress: number }>;
   leastActive: Array<{ name: string; progress: number }>;
 }
@@ -17,8 +15,6 @@ const Overview = () => {
   const [stats, setStats] = useState<Stats>({
     totalStudents: 0,
     totalVideos: 0,
-    totalCompleted: 0,
-    averageProgress: 0,
     topStudents: [],
     leastActive: [],
   });
@@ -40,8 +36,6 @@ const Overview = () => {
       const studentList = students.filter(s => s.role !== 'admin');
       const totalStudents = studentList.length;
 
-      const totalCompleted = progressData.filter((p) => p.completed).length;
-
       // Calculate progress per student
       const studentProgress = studentList.map((student) => {
         const userProgress = progressData.filter(
@@ -51,12 +45,6 @@ const Overview = () => {
         const progress = totalVideos > 0 ? (completed / totalVideos) * 100 : 0;
         return { name: student.name, progress };
       });
-
-      const averageProgress =
-        studentProgress.length > 0
-          ? studentProgress.reduce((sum, s) => sum + s.progress, 0) /
-            studentProgress.length
-          : 0;
 
       // Sort students by progress
       const sorted = [...studentProgress].sort(
@@ -68,8 +56,6 @@ const Overview = () => {
       setStats({
         totalStudents,
         totalVideos,
-        totalCompleted,
-        averageProgress,
         topStudents,
         leastActive,
       });
@@ -100,18 +86,6 @@ const Overview = () => {
       value: stats.totalVideos,
       icon: Video,
       color: "text-purple-600",
-    },
-    {
-      title: "Total Completed",
-      value: stats.totalCompleted,
-      icon: CheckCircle2,
-      color: "text-green-600",
-    },
-    {
-      title: "Average Progress",
-      value: `${stats.averageProgress.toFixed(1)}%`,
-      icon: TrendingUp,
-      color: "text-orange-600",
     },
   ];
 

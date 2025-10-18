@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "tsx server/main.ts",
-    "build": "vite build",
+    "build": "vite build && npm run build:server",
+    "build:server": "tsc --project tsconfig.server.json",
     "build:dev": "vite build --mode development",
+    "start": "node dist/server/main.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "db:push": "drizzle-kit push"
