@@ -90,8 +90,31 @@ const AdminDashboard = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 overflow-auto">
-        <Outlet />
+      <main className="flex-1 overflow-auto flex flex-col">
+        {/* Header Bar */}
+        <div className="bg-card border-b border-border px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <h1 className="text-lg font-semibold text-foreground">
+              Welcome, {profile?.name}
+            </h1>
+            <span className="text-sm text-muted-foreground">
+              ({profile?.role})
+            </span>
+          </div>
+          <Button
+            variant="outline"
+            onClick={signOut}
+            className="flex items-center gap-2"
+          >
+            <LogOut className="h-4 w-4" />
+            Logout
+          </Button>
+        </div>
+        
+        {/* Page Content */}
+        <div className="flex-1 overflow-auto">
+          <Outlet />
+        </div>
       </main>
     </div>
   );
